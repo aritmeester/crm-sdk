@@ -142,7 +142,7 @@ class WebAPI extends actions(associate(create(destroy(functions(read(request(upd
         return queryParts.length ? "?" + queryParts.join("&") : "";
     }
     
-    static urlQueryString(locationSearch = window.location.search) {
+    static urlQueryString(locationSearch = top.location.search) {
         if (locationSearch.charAt(0) !== "?") {
             return locationSearch;
         }
